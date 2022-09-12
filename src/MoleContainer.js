@@ -9,7 +9,7 @@ export default function MoleContainer (props) {
         props.setScore(props.score +1)
         setTheMole(false)
     }
-    let displayMole = theMole?<Mole setscore={props.setScore} handleClick={handleClick}/>:<EmptySlot toggle={setTheMole} />
+    let displayMole = theMole?<Mole setscore={props.setScore} handleClick={handleClick} toggle={setTheMole}/>:<EmptySlot toggle={setTheMole} />
     return(
         <div style={{'display':'inline-block', 'width':'15vw'}}>
            {displayMole}
