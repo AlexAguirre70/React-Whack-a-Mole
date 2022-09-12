@@ -2,9 +2,9 @@ import {useEffect} from 'react'
 
 export default function EmptySlot(props){
     useEffect(() => {
-        let randSeconds = Math.ceil(Math.random() * 4000)
+        let randSeconds = Math.ceil(Math.random() * 5000)
         let timer = setTimeout(() => {
-            props.setTheMole(true)
+            props.toggle(true)
         }, randSeconds)
         return () => clearTimeout(timer)
     })

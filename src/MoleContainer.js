@@ -3,7 +3,7 @@ import Mole from "./components/Mole";
 import EmptySlot from "./components/EmptySlot";
 
 export default function MoleContainer (props) {
-    let [theMole,setTheMole]=useState(true)
+    let [theMole,setTheMole]=useState(false)
     
     const handleClick=(e)=> {
         props.setScore(props.score +1)

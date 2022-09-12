@@ -1,10 +1,10 @@
-import {useEffect} from 'react'
+import {useState,useEffect} from 'react'
 
 export default function Mole(props){
     useEffect(() => {
-        let randSeconds = Math.ceil(Math.random() * 4000)
+        let randSeconds = Math.ceil(Math.random() * 5000)
         let timer = setTimeout(() => {
-            props.setTheMole(false)
+            props.toggle(false)
         }, randSeconds)
         return () => clearTimeout(timer)
     })
