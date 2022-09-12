@@ -1,9 +1,26 @@
+import { useState } from 'react';
 import './App.css';
+import MoleContainer from './MoleContainer';
 
 function App() {
+  let [score,setScore]=useState(0)
+
+  const createMoleHill = ()=>{
+    let hills =[]
+    for (let i=0; i<9;i++){
+      hills.push(
+        <MoleContainer key={i} setScore={setScore} score={score}/>
+      )
+    }
+    return (
+      <div>{hills}</div>
+    )
+  }
   return (
     <div className="App">
-     <p>This is the start of the Whack-a-Mole-Project</p>
+      <h1> Let's Play Whack-a-Mole</h1>
+      <h2> Your Score is : {score}</h2>
+      {createMoleHill()};
     </div>
   );
 }
